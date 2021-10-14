@@ -1,19 +1,8 @@
 module.exports = {
-  async redirects() {
-    return [
-      {
-        source: '/request-invite',
-        destination: '/signup',
-        permanent: true,
-      },
-    ]
-  },
   images: {
     domains: ['res.cloudinary.com', 'localhost'],
   },
   env: {
-    GOOGLE_ANALYTICS_TRACKING_ID: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
-    SEGMENT_WRITE_KEY: process.env.SEGMENT_WRITE_KEY,
     STEPZEN_API_KEY: process.env.STEPZEN_API_KEY,
     STEPZEN_API_URL: process.env.STEPZEN_API_URL,
   },
