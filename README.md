@@ -9,6 +9,23 @@ You'll need to create a [StepZen account](https://stepzen.com/request-invite) fi
 
 We used Airtable and Lob -- Airtable for storing the addresses, and Lob for verifying them. If you want to clone down this project and use it as a starting point for your own stickers page, you'll need to sign up for both services and use the keys to fill your `config.yaml`, which you'll make inside your working directory. It will look something like:
 
+```yaml
+configurationset:
+  - configuration:
+        name: airtable_config
+        Authorization: Bearer PUT_YOUR_KEY_HERE
+        baseid: PUT_YOUR_BASE_ID_HERE
+  - configuration:
+        name: lob_test_config
+        Authorization: Basic PUT_YOUR_KEY_HERE
+  - configuration:
+        name: lob_live_config
+        Authorization: Basic PUT_YOUR_KEY_HERE
+  - configuration:
+        name: lob_dummy_live_config
+        Authorization: Basic PUT_YOUR_KEY_HERE
+```
+    
 Open your terminal and [install the StepZen CLI](https://stepzen.com/docs/quick-start). 
 After you've followed the prompts (you can accept the suggested endpoint name-- in my case it was `api/happy-bunny`) and installed the CLI, run `stepzen start`.
 
@@ -22,14 +39,9 @@ Successfully deployed api/happy-bunny at 9:00:07 AM
 ```
 You'll see your StepZen Explorer pop up on your localhost:5000 address:
 
-*include screenshot of your graphiql editor here with width set to 600* 
 <img width="600" alt="Screen Shot 2021-07-01 at 9 08 20 AM" src="https://user-images.githubusercontent.com/54046179/124156000-f3a4d380-da4b-11eb-8f65-738a9cca6f8c.png">
 
-In the left pane, copy and paste:
-*include sample graphql query text here*
-
-and you'll get the response:
-*include sample json response here*
+Click the 'Explorer' tab to begin adding queries.
 
 ## Open up the UI in your browser
 To run the development version:
